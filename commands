@@ -1,0 +1,4729 @@
+Day1:
+
+
+
+Login to instance :
+
+
+
+ open ec2 service from aws console then select the instance you want to connect then click on connect and follow the steps to do ssh.
+
+
+
+Ex:
+
+ssh -i "mylinuxkeypair.pem" ec2-user@ec2-3-23-94-76.us-east-2.compute.amazonaws.com
+
+
+
+
+
+Git is a free and open source distributed version control system designed to handle everything from small to very large projects with speed and efficiency.
+
+
+
+Version control tool is process to store all members changes in centralized location and keep track of all the changes being done in the version control system by whom,why and when.
+
+
+
+YUM: 
+
+
+
+Yellowdog Updater Modified
+
+It acts as a frontend to rpm and handles all dependency issues
+
+
+
+RPM:
+
+RPM (Red Hat Package Manager) is an default open source and most popular package management utility for Red Hat based systems like (RHEL, CentOS and Fedora). The tool allows system administrators and users to install, update, uninstall, query, verify and manage system software packages in Unix/Linux operating systems
+
+
+
+
+
+
+
+Installing git:
+
+
+
+yum install git -y
+
+
+
+To check GIT version:
+
+
+
+# git --version
+
+
+
+
+
+Setting up username:
+
+
+
+# git config --global user.name “ashok”
+
+
+
+# git config --global user.name
+
+
+
+Setting up email:
+
+
+
+# git config --global user.email “ashok.kammala@gmail.com”
+
+
+
+# git config --global user.email
+
+
+
+With all the basic setting in place let’s start our first GIT project
+
+
+
+Create project directory:
+
+#cd /opt
+
+#mkdir myfirstproject
+
+
+
+change directory to myfirstproject:
+
+
+
+#cd myfirstproject
+
+
+
+#git init
+
+
+
+#git status
+
+
+
+Now let start our project and create our first file:
+
+
+
+ cat > file1.txt
+
+
+
+This is my new file in Linux.
+
+
+
+The cat command is very useful.
+
+
+
+------or---
+
+# vi firstnovel --> press i
+
+
+
+"this is my first novel"
+
+
+
+:wq!
+
+
+
+
+
+
+
+# git add . ( staging area)
+
+
+
+# git status
+
+
+
+#git commit -m “my first project file” (local project repository)
+
+
+
+#git status
+
+
+
+Now let’s check the git commit history
+
+
+
+# git log
+
+
+
+# vi secondnovel --> press i
+
+
+
+
+
+
+
+"this is my second novel"
+
+
+
+
+
+
+
+:wq!
+
+
+
+# git add . ( staging area)
+
+
+
+
+
+
+
+# git status
+
+
+
+
+
+
+
+#git commit -m “my second project file” (local project repository)
+
+
+
+
+
+
+
+#git status
+
+
+
+
+
+
+
+Now let’s check the git commit history
+
+
+
+
+
+
+
+
+
+DAY2:
+
+
+
+CREATE GITHUB Account
+
+
+
+
+
+VI Editor Shortcuts:
+
+
+
+i : Inserts text before current cursor location.
+
+I : Inserts text at beginning of current line.
+
+a : Inserts text after current cursor location.
+
+A : Inserts text at end of current line.
+
+o : Creates a new line for text entry below cursor location.
+
+O : Creates a new line for text entry above cursor location.
+
+r : Replace single character under the cursor with the next character typed.
+
+R : Replaces text from the cursor to right.
+
+s : Replaces single character under the cursor with any number of characters.
+
+S :Replaces entire line.
+
+
+
+X Uppercase: Deletes the character before the cursor location.
+
+x Lowercase : Deletes the character at the cursor location.
+
+Dw : Deletes from the current cursor location to the next word.
+
+d^ : Deletes from current cursor position to the beginning of the line.
+
+d$ : Deletes from current cursor position to the end of the line.
+
+Dd : Deletes the line the cursor is on.
+
+
+
+Yy : Copies the current line.
+
+9yy : Yank current line and 9 lines below.
+
+p : Puts the copied text after the cursor.
+
+P : Puts the yanked text before the cursor.
+
+
+
+q : Quit
+
+q! : Quit without saving changes i.e. discard changes.
+
+r fileName : Read data from file called fileName.
+
+wq : Write and quit (save and exit).
+
+w fileName : Write to file called fileName (save as).
+
+w! fileName : Overwrite to file called fileName (save as forcefully).
+
+!cmd : Runs shell commands and returns to Command mode.
+
+
+
+
+
+Adding a remote
+
+
+
+# git remote add origin https://github.com/Devendranathashok/test-one
+
+
+
+# git remote -v
+
+
+
+once we add remote , we can push all our changes from local repository to central repo i.e GITHUB.
+
+
+
+  1 clear
+
+  2 mkdir sample
+
+  3 vi demo
+
+  4 git staus
+
+  5 git init
+
+  6 git status
+
+  7 ls -lrt
+
+  8 cd ..
+
+  9 pwd
+
+  10 mkdir sample
+
+  11 cd sample
+
+  12 vi demo
+
+  13 git status
+
+  14 git init
+
+  15 git status
+
+  16 ls -lrt
+
+  17 cd demo
+
+  18 cd sample
+
+  19 ls -lrt
+
+  20 git status
+
+  21 cd ..
+
+  22 cd myfirstproject
+
+  23 ls -lrt
+
+  24 git remote add origin https://github.com/Devendranathashok/myfirstproject
+
+  25 git remote -v
+
+  26 git push
+
+  27 git push --set-upstream origin master
+
+  28 clear
+
+  29 clear
+
+  30 pwd
+
+  31 ls -lrt
+
+  32 mkdir test
+
+  33 cd test
+
+  34 git init
+
+  35 vi test.txt
+
+  36 git status
+
+  37 git add .
+
+  38 git status
+
+  39 git commit -m "Commit-1"
+
+  40 git log
+
+  41 vi test.txt
+
+  42 git status
+
+  43 git add .
+
+  44 git status
+
+  45 git commit -m "Commit-2"
+
+  46 vi test.txt
+
+  47 git status
+
+  48 git add .
+
+  49 git status
+
+  50 git commit -m "Commit-3"
+
+  51 git log
+
+  52 vi test.txt
+
+  53 git checkout d0733c92dab24b210730c0ef744d46ada0fa8529
+
+  54 vi test.txt
+
+  55 git checkout 409bc73cb7752e6e4d337fed5919ce718fe0112b
+
+  56 vi test.txt
+
+  57 git checkout d0733c92dab24b210730c0ef744d46ada0fa8529
+
+  58 vi test.txt
+
+  59 git checkout 827daf76a55c117e1da049e889980aa6d40a92ea
+
+  60 vi test.txt
+
+  61 git log
+
+  62 cd test
+
+  63 vi test.txt
+
+  64 git og
+
+  65 git log
+
+  66 git checkout d0733c92dab24b210730c0ef744d46ada0fa8529
+
+  67 vi test.txt
+
+  68 cd test
+
+  69 ls -lrt
+
+  70 git remote add origin https://github.com/Devendranathashok/test
+
+  71 git remote -v
+
+  72 git push
+
+  73 git push origin master/feature
+
+  74 clear
+
+  75 pwd
+
+  76 ls -lrt
+
+  77 git clone https://github.com/Devendranathashok/ansible-certsforhttp.git
+
+  78 ls -lrt
+
+  79 cd ansible-certsforhttp/
+
+  80 ls -lrt
+
+  81 vi README.md
+
+  82 git status
+
+  83 git commit -m "modified readme"
+
+  84 git add .
+
+  85 git commit -m "modified readme"
+
+  86 git push
+
+  87 cd ..
+
+  88 git clone https://github.com/Devendranathashok/test-one.git
+
+  89 ls -lrt
+
+  90 cd test-one
+
+  91 ls -lrt
+
+  92 git branch
+
+  93 cd /opt
+
+  94 cd test-one/
+
+  95 git branch
+
+  96 git master
+
+  97 git checkout master
+
+  98 git branch
+
+  99 git branch feature-iot
+
+ 100 git checkout feature-iot
+
+ 101 git branch
+
+ 102 ls -lrt
+
+ 103 git checkout master
+
+ 104 git pull
+
+ 105 git branch -d feature-iot
+
+ 106 git branch feature-cicd
+
+ 107 git checkout feature-cicd
+
+ 108 ls -lrt
+
+ 109 git branch
+
+ 110 vi jenkisfile
+
+ 111 git status
+
+ 112 git add jenkisfile
+
+ 113 git commit -m "adding jenkinsfile"
+
+ 114 git push
+
+ 115 git push orgin feature-cicd
+
+ 116 git status
+
+ 117 git push orgin feature-cicd
+
+ 118 git push origin feature-cicd
+
+ 119 git checkout master
+
+ 120 ls -lrt
+
+ 121 vi testing.txt
+
+ 122 git add .
+
+ 123 git commit -m "testing push rejects"
+
+ 124 git push
+
+ 125 git pull
+
+ 126 ls -lrt
+
+ 127 git push
+
+ 128 git brach
+
+ 129 git branch
+
+ 130 vi cal.txt
+
+ 131 git add .
+
+ 132 git commit -m "adding cal.txt"
+
+ 133 git push
+
+ 134 git fetch
+
+ 135 git push
+
+ 136 git merge
+
+ 137 git push
+
+ 138 vi .gitingnore
+
+ 139 vi .gitingnore
+
+ 140 vi ashok.py
+
+ 141 vi ignorethisfile
+
+ 142 git add .gitignore
+
+ 143 ls -lrt
+
+ 144 vi .gitignore
+
+ 145 ls -lart
+
+ 146 git add .gitignore
+
+ 147 git commit -m "adding .gitignore"
+
+ 148 git push
+
+ 149 ls -lrt
+
+ 150 git status
+
+ 151 git pull
+
+ 152 git add .
+
+ 153 git status
+
+ 154 vi .gitignore
+
+ 155 git commit -m "testing gitignore"
+
+ 156 git push
+
+ 157 history
+
+
+
+
+
+
+
+
+
+ yum install wget -y
+
+ 615 yum install -y java-1.8.0-openjdk-devel
+
+ 616 java -version
+
+ 617 cd /opt
+
+ 618 cd ..
+
+ 619 cd /usr
+
+ 620 ls -lrt
+
+ 621 cd local
+
+ 622 ls -lrt
+
+ 623 cd src
+
+ 624 ls -lrt
+
+ 625 wget http://www-us.apache.org/dist/maven/maven-3/3.5.4/binaries/apache-maven-3.5.4-bin.tar.gz
+
+ 626 ls -lrt
+
+ 627 tar -xf apache-maven-3.5.4-bin.tar.gz
+
+ 628 ls -lrt
+
+ 629 cd apache-maven-3.5.4
+
+ 630 ls -lrt
+
+ 631 cd ..
+
+ 632 mv apache-maven-3.5.4/ apache-maven/
+
+ 633 ls -lrt
+
+ 634 mvn
+
+ 635 cd /etc/profile.d/
+
+ 636 ls -lrt
+
+ 637 vim maven.sh
+
+ 638 vi maven.sh
+
+ 639 chmod +x maven.sh
+
+ 640 source /etc/profile.d/maven.sh
+
+ 641 mvn
+
+ 642 mvn --version
+
+
+
+
+
+TOMCAT:
+
+Install :
+
+after ec2 login
+
+sudo su -
+
+cd /usr/local
+
+wget https://downloads.apache.org/tomcat/tomcat-7/v7.0.104/bin/apache-tomcat-7.0.104.tar.gz
+
+tar xvfz apache-tomcat-7.0.104.tar.gz
+
+mv apache-tomcat-7.0.104 tomcat
+
+ start:
+
+cd /usr/local/tomcat/bin 
+
+./startup.sh
+
+
+
+open tomcat in web browser :
+
+
+
+http://18.216.220.91:8080
+
+
+
+tomcat user set up:
+
+
+
+cd /usr/local/tomcat/conf
+
+
+
+vi tomcat-users.xml
+
+
+
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+
+ Licensed to the Apache Software Foundation (ASF) under one or more
+
+ contributor license agreements. See the NOTICE file distributed with
+
+ this work for additional information regarding copyright ownership.
+
+ The ASF licenses this file to You under the Apache License, Version 2.0
+
+ (the "License"); you may not use this file except in compliance with
+
+ the License. You may obtain a copy of the License at
+
+
+
+   http://www.apache.org/licenses/LICENSE-2.0
+
+
+
+ Unless required by applicable law or agreed to in writing, software
+
+ distributed under the License is distributed on an "AS IS" BASIS,
+
+ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+
+ See the License for the specific language governing permissions and
+
+ limitations under the License.
+
+-->
+
+<tomcat-users xmlns="http://tomcat.apache.org/xml"
+
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+
+       xsi:schemaLocation="http://tomcat.apache.org/xml tomcat-users.xsd"
+
+       version="1.0">
+
+<!--
+
+ NOTE: By default, no user is included in the "manager-gui" role required
+
+ to operate the "/manager/html" web application. If you wish to use this app,
+
+ you must define such a user - the username and password are arbitrary. It is
+
+ strongly recommended that you do NOT use one of the users in the commented out
+
+ section below since they are intended for use with the examples web
+
+ application.
+
+-->
+
+<!--
+
+ NOTE: The sample user and role entries below are intended for use with the
+
+ examples web application. They are wrapped in a comment and thus are ignored
+
+ when reading this file. If you wish to configure these users for use with the
+
+ examples web application, do not forget to remove the <!.. ..> that surrounds
+
+ them. You will also need to set the passwords to something appropriate.
+
+-->
+
+
+
+<role rolename="manager-gui"/>
+
+<role romename="manager-script"/>
+
+<user username="tomcat" password="s3cret" roles="manager-gui,manager-script"/>
+
+</tomcat-users>
+
+
+
+
+
+Restart tomcat:
+
+
+
+cd /usr/local/tomcat/bin
+
+
+
+./shutdown.sh
+
+
+
+./startup.sh
+
+
+
+http://18.216.220.91:8080
+
+
+
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+cd /opt
+
+git clone https://github.com/Devendranathashok/my-app.git
+
+
+
+cd my-app
+
+
+
+mvn package
+
+
+
+cp -pr /opt/my-app/target/my-web.0.0.1.war /usr/local/tomcat/webapps
+
+
+
+Restart tomcat:
+
+
+
+cd /usr/local/tomcat/bin
+
+
+
+./shutdown.sh
+
+
+
+./startup.sh
+
+
+
+Nexus:
+
+
+
+https://devopscube.com/how-to-install-latest-sonatype-nexus-3-on-linux/
+
+
+
+
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+[root@ip-172-31-42-9 controller]# ls -lrt
+
+total 4
+
+-rwxr-xr-x. 1 root root 305 May 29 04:09 Calculator.java
+
+[root@ip-172-31-42-9 controller]# vi Calculator.java
+
+[root@ip-172-31-42-9 controller]# git status
+
+HEAD detached at 304c497
+
+Changes not staged for commit:
+
+ (use "git add <file>..." to update what will be committed)
+
+ (use "git checkout -- <file>..." to discard changes in working directory)
+
+
+
+    modified: Calculator.java
+
+
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+[root@ip-172-31-42-9 controller]# git add .
+
+[root@ip-172-31-42-9 controller]# git status
+
+HEAD detached at 304c497
+
+Changes to be committed:
+
+ (use "git reset HEAD <file>..." to unstage)
+
+
+
+    modified: Calculator.java
+
+
+
+[root@ip-172-31-42-9 controller]# git commit -m "added ,"
+
+[detached HEAD cc1ebe2] added ,
+
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+[root@ip-172-31-42-9 controller]# git push origin master
+
+Username for 'https://github.com': ashok.kammala@gmail.com
+
+Password for 'https://ashok.kammala@gmail.com@github.com':
+
+remote: Invalid username or password.
+
+fatal: Authentication failed for 'https://github.com/Devendranathashok/my-app.git/'
+
+[root@ip-172-31-42-9 controller]# git push origin master
+
+Username for 'https://github.com': ashok.kammala@gmail.com
+
+Password for 'https://ashok.kammala@gmail.com@github.com':
+
+To https://github.com/Devendranathashok/my-app.git
+
+ ! [rejected] master -> master (fetch first)
+
+error: failed to push some refs to 'https://github.com/Devendranathashok/my-app.git'
+
+hint: Updates were rejected because the remote contains work that you do
+
+hint: not have locally. This is usually caused by another repository pushing
+
+hint: to the same ref. You may want to first integrate the remote changes
+
+hint: (e.g., 'git pull ...') before pushing again.
+
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+
+[root@ip-172-31-42-9 controller]# git pull
+
+remote: Enumerating objects: 19, done.
+
+remote: Counting objects: 100% (19/19), done.
+
+remote: Compressing objects: 100% (4/4), done.
+
+Unpacking objects: 100% (10/10), done.
+
+remote: Total 10 (delta 2), reused 0 (delta 0), pack-reused 0
+
+From https://github.com/Devendranathashok/my-app
+
+  304c497..23636f1 master -> origin/master
+
+You are not currently on a branch.
+
+Please specify which branch you want to merge with.
+
+See git-pull(1) for details.
+
+
+
+  git pull <remote> <branch>
+
+
+
+[root@ip-172-31-42-9 controller]# git pull master
+
+fatal: 'master' does not appear to be a git repository
+
+fatal: Could not read from remote repository.
+
+
+
+Please make sure you have the correct access rights
+
+and the repository exists.
+
+[root@ip-172-31-42-9 controller]# git pull origin master
+
+From https://github.com/Devendranathashok/my-app
+
+ * branch master -> FETCH_HEAD
+
+Merge made by the 'recursive' strategy.
+
+ src/test/java/in/javahome/myweb/controller/CalculatorTest.java | 3 +++
+
+ 1 file changed, 3 insertions(+)
+
+[root@ip-172-31-42-9 controller]# git push origin master
+
+Username for 'https://github.com': ashok.kammala@gmail.com
+
+Password for 'https://ashok.kammala@gmail.com@github.com':
+
+To https://github.com/Devendranathashok/my-app.git
+
+ ! [rejected] master -> master (non-fast-forward)
+
+error: failed to push some refs to 'https://github.com/Devendranathashok/my-app.git'
+
+hint: Updates were rejected because a pushed branch tip is behind its remote
+
+hint: counterpart. Check out this branch and integrate the remote changes
+
+hint: (e.g. 'git pull ...') before pushing again.
+
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+
+[root@ip-172-31-42-9 controller]# git pull origin master
+
+From https://github.com/Devendranathashok/my-app
+
+ * branch master -> FETCH_HEAD
+
+Already up to date.
+
+[root@ip-172-31-42-9 controller]# git branch
+
+* (HEAD detached from 304c497)
+
+ master
+
+[root@ip-172-31-42-9 controller]# git checkout master
+
+Warning: you are leaving 2 commits behind, not connected to
+
+any of your branches:
+
+
+
+ a5eb398 Merge branch 'master' of https://github.com/Devendranathashok/my-app into HEAD
+
+ cc1ebe2 added ,
+
+
+
+If you want to keep them by creating a new branch, this may be a good time
+
+to do so with:
+
+
+
+ git branch <new-branch-name> a5eb398
+
+
+
+Switched to branch 'master'
+
+Your branch is behind 'origin/master' by 1 commit, and can be fast-forwarded.
+
+ (use "git pull" to update your local branch)
+
+[root@ip-172-31-42-9 controller]# git branch
+
+* master
+
+++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+
+
+git clone https://github.com/Devendranathashok/my-app.git
+
+
+
++++++++++++++++++++++++++++++++++++++++++++
+
+mvn test
+
+mvn complile
+
+mvn package
+
+mvn clean
+
+
+
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+
+
+[root@ip-172-31-42-9 target]# history
+
+  1 yum update -y
+
+  2 yum install git -y
+
+  3 git --version
+
+  4 clear
+
+  5 cd /apps
+
+  6 ls -lrt
+
+  7 cd my-app
+
+  8 cd /apps/my-app/src/main/java/in/javahome/myweb/controller
+
+  9 ls -lrt
+
+  10 vi Calculator.java
+
+  11 git status
+
+  12 git add .
+
+  13 git status
+
+  14 git commit -m "added ,"
+
+  15 git push origin master
+
+  16 git pull
+
+  17 git pull master
+
+  18 git pull origin master
+
+  19 git push origin master
+
+  20 git pull origin master
+
+  21 git branch
+
+  22 git checkout master
+
+  23 git branch
+
+  24 git pull origin master
+
+  25 git push origin master
+
+  26 ls -lrt
+
+  27 vi Calculator.java
+
+  28 git status
+
+  29 git add .
+
+  30 git commit -m "added comma"
+
+  31 git push
+
+  32 git pull
+
+  33 git push origin master
+
+  34 clear
+
+  35 yum install maven -n
+
+  36 yum install maven -y
+
+  37 mvn
+
+  38 cd ..
+
+  39 ls -lrt
+
+  40 mvn clean
+
+  41 mvn package
+
+  42 git branch
+
+  43 git pull origin master
+
+  44 mvn package
+
+  45 git pull
+
+  46 mvn package
+
+  47 git pull
+
+  48 mvn package
+
+  49 ls -lrt
+
+  50 cd targetr
+
+  51 cd target
+
+  52 ls -lrt
+
+  53 history
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+nexus:
+
+https://devopscube.com/how-to-install-latest-sonatype-nexus-3-on-linux/
+
+
+
+yum install wget -y
+
+https://help.sonatype.com/repomanager3/download
+
+wget https://download.sonatype.com/nexus/3/latest-unix.tar.gz
+
+tar xvzf  latest-unix.tar.gz
+
+mv nexus-3.23.0-03 nexus
+
+
+
+to install java8
+
+yum install java-1.8.0-openjdk.x86_64 -y
+
+
+
+to adduser
+
+
+
+adduser nexus
+
+passwd nexus
+
+
+
+vi /etc/sudoers ---> 
+
+
+
+## Same thing without a password
+
+# %wheel ALL=(ALL) NOPASSWD: ALL
+
+nexus ALL=(ALL) NOPASSWD: ALL
+
+
+
+sudo vi /usr/local/nexus/bin/nexus.vmoptions
+
+
+
+
+
+[Unit]
+
+Description=nexus service
+
+After=network.target
+
+
+
+[Service]
+
+Type=forking
+
+LimitNOFILE=65536
+
+User=nexus
+
+Group=nexus
+
+ExecStart=/usr/local/nexus/bin/nexus start
+
+ExecStop=/usr/local/nexus/bin/nexus stop
+
+User=nexus
+
+Restart=on-abort
+
+
+
+[Install]
+
+WantedBy=multi-user.target
+
+
+
+
+
+[root@ip-172-31-36-98 bin]# su nexus
+
+
+
+[nexus@ip-172-31-36-98 bin]$ sudo systemctl start nexus
+
+
+
+[nexus@ip-172-31-36-98 bin]$ systemctl status nexus
+
+● nexus.service - nexus service
+
+  Loaded: loaded (/etc/systemd/system/nexus.service; enabled; vendor preset: disabled)
+
+  Active: active (running) since Sat 2020-05-30 14:22:59 UTC; 9s ago
+
+ Process: 13659 ExecStart=/usr/local/nexus/bin/nexus start (code=exited, status=0/SUCCESS)
+
+ Main PID: 13857 (java)
+
+  Tasks: 39 (limit: 23878)
+
+  Memory: 946.5M
+
+  CGroup: /system.slice/nexus.service
+
+      └─13857 /usr/lib/jvm/java-1.8.0-openjdk-1.8.0.252.b09-2.el8_1.x86_64/jre/bin/java -server -Dinstall4j.jvmDir=/usr/lib/jvm/java-1.8.0-openjdk-1.8.0.252.b09-2.el8_1.x86_64/jre >
+
+lines 1-9/9 (END)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+i --- insert
+
+dd -- complete delete
+
+x - one letter delete
+
+:wq! - save & quit
+
+:q! - quit without save
+
+VI Editor Shortcuts:
+
+
+
+
+
+
+
+i : Inserts text before current cursor location.
+
+
+
+I : Inserts text at beginning of current line.
+
+
+
+a : Inserts text after current cursor location.
+
+
+
+A : Inserts text at end of current line.
+
+
+
+o : Creates a new line for text entry below cursor location.
+
+
+
+O : Creates a new line for text entry above cursor location.
+
+
+
+r : Replace single character under the cursor with the next character typed.
+
+
+
+R : Replaces text from the cursor to right.
+
+
+
+s : Replaces single character under the cursor with any number of characters.
+
+
+
+S :Replaces entire line.
+
+
+
+
+
+
+
+X Uppercase: Deletes the character before the cursor location.
+
+
+
+x Lowercase : Deletes the character at the cursor location.
+
+
+
+Dw : Deletes from the current cursor location to the next word.
+
+
+
+d^ : Deletes from current cursor position to the beginning of the line.
+
+
+
+d$ : Deletes from current cursor position to the end of the line.
+
+
+
+Dd : Deletes the line the cursor is on.
+
+
+
+
+
+
+
+Yy : Copies the current line.
+
+
+
+9yy : Yank current line and 9 lines below.
+
+
+
+p : Puts the copied text after the cursor.
+
+
+
+P : Puts the yanked text before the cursor.
+
+
+
+
+
+
+
+q : Quit
+
+
+
+q! : Quit without saving changes i.e. discard changes.
+
+
+
+r fileName : Read data from file called fileName.
+
+
+
+wq : Write and quit (save and exit).
+
+
+
+w fileName : Write to file called fileName (save as).
+
+
+
+w! fileName : Overwrite to file called fileName (save as forcefully).
+
+
+
+!cmd : Runs shell commands and returns to Command mode.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Day1:
+
+
+
+Login to instance :
+
+
+
+ open ec2 service from aws console then select the instance you want to connect then click on connect and follow the steps to do ssh.
+
+
+
+Ex:
+
+ssh -i "mylinuxkeypair.pem" ec2-user@ec2-3-23-94-76.us-east-2.compute.amazonaws.com
+
+
+
+
+
+Git is a free and open source distributed version control system designed to handle everything from small to very large projects with speed and efficiency.
+
+
+
+Version control tool is process to store all members changes in centralized location and keep track of all the changes being done in the version control system by whom,why and when.
+
+
+
+YUM: 
+
+
+
+Yellowdog Updater Modified
+
+It acts as a frontend to rpm and handles all dependency issues
+
+
+
+RPM:
+
+RPM (Red Hat Package Manager) is an default open source and most popular package management utility for Red Hat based systems like (RHEL, CentOS and Fedora). The tool allows system administrators and users to install, update, uninstall, query, verify and manage system software packages in Unix/Linux operating systems
+
+
+
+
+
+
+
+Installing git:
+
+
+
+yum install git -y
+
+
+
+To check GIT version:
+
+
+
+# git --version
+
+
+
+
+
+Setting up username:
+
+
+
+# git config --global user.name “ashok”
+
+
+
+# git config --global user.name
+
+
+
+Setting up email:
+
+
+
+# git config --global user.email “ashok.kammala@gmail.com”
+
+
+
+# git config --global user.email
+
+
+
+With all the basic setting in place let’s start our first GIT project
+
+
+
+Create project directory:
+
+#cd /opt
+
+#mkdir myfirstproject
+
+
+
+change directory to myfirstproject:
+
+
+
+#cd myfirstproject
+
+
+
+#git init
+
+
+
+#git status
+
+
+
+Now let start our project and create our first file:
+
+
+
+ cat > file1.txt
+
+
+
+This is my new file in Linux.
+
+
+
+The cat command is very useful.
+
+
+
+------or---
+
+# vi firstnovel --> press i
+
+
+
+"this is my first novel"
+
+
+
+:wq!
+
+
+
+
+
+
+
+# git add . ( staging area)
+
+
+
+# git status
+
+
+
+#git commit -m “my first project file” (local project repository)
+
+
+
+#git status
+
+
+
+Now let’s check the git commit history
+
+
+
+# git log
+
+
+
+# vi secondnovel --> press i
+
+
+
+
+
+
+
+"this is my second novel"
+
+
+
+
+
+
+
+:wq!
+
+
+
+# git add . ( staging area)
+
+
+
+
+
+
+
+# git status
+
+
+
+
+
+
+
+#git commit -m “my second project file” (local project repository)
+
+
+
+
+
+
+
+#git status
+
+
+
+
+
+
+
+Now let’s check the git commit history
+
+
+
+
+
+
+
+
+
+DAY2:
+
+
+
+CREATE GITHUB Account
+
+
+
+
+
+VI Editor Shortcuts:
+
+
+
+i : Inserts text before current cursor location.
+
+I : Inserts text at beginning of current line.
+
+a : Inserts text after current cursor location.
+
+A : Inserts text at end of current line.
+
+o : Creates a new line for text entry below cursor location.
+
+O : Creates a new line for text entry above cursor location.
+
+r : Replace single character under the cursor with the next character typed.
+
+R : Replaces text from the cursor to right.
+
+s : Replaces single character under the cursor with any number of characters.
+
+S :Replaces entire line.
+
+
+
+X Uppercase: Deletes the character before the cursor location.
+
+x Lowercase : Deletes the character at the cursor location.
+
+Dw : Deletes from the current cursor location to the next word.
+
+d^ : Deletes from current cursor position to the beginning of the line.
+
+d$ : Deletes from current cursor position to the end of the line.
+
+Dd : Deletes the line the cursor is on.
+
+
+
+Yy : Copies the current line.
+
+9yy : Yank current line and 9 lines below.
+
+p : Puts the copied text after the cursor.
+
+P : Puts the yanked text before the cursor.
+
+
+
+q : Quit
+
+q! : Quit without saving changes i.e. discard changes.
+
+r fileName : Read data from file called fileName.
+
+wq : Write and quit (save and exit).
+
+w fileName : Write to file called fileName (save as).
+
+w! fileName : Overwrite to file called fileName (save as forcefully).
+
+!cmd : Runs shell commands and returns to Command mode.
+
+
+
+
+
+Adding a remote
+
+
+
+# git remote add origin https://github.com/Devendranathashok/test-one
+
+
+
+# git remote -v
+
+
+
+once we add remote , we can push all our changes from local repository to central repo i.e GITHUB.
+
+
+
+  1 clear
+
+  2 mkdir sample
+
+  3 vi demo
+
+  4 git staus
+
+  5 git init
+
+  6 git status
+
+  7 ls -lrt
+
+  8 cd ..
+
+  9 pwd
+
+  10 mkdir sample
+
+  11 cd sample
+
+  12 vi demo
+
+  13 git status
+
+  14 git init
+
+  15 git status
+
+  16 ls -lrt
+
+  17 cd demo
+
+  18 cd sample
+
+  19 ls -lrt
+
+  20 git status
+
+  21 cd ..
+
+  22 cd myfirstproject
+
+  23 ls -lrt
+
+  24 git remote add origin https://github.com/Devendranathashok/myfirstproject
+
+  25 git remote -v
+
+  26 git push
+
+  27 git push --set-upstream origin master
+
+  28 clear
+
+  29 clear
+
+  30 pwd
+
+  31 ls -lrt
+
+  32 mkdir test
+
+  33 cd test
+
+  34 git init
+
+  35 vi test.txt
+
+  36 git status
+
+  37 git add .
+
+  38 git status
+
+  39 git commit -m "Commit-1"
+
+  40 git log
+
+  41 vi test.txt
+
+  42 git status
+
+  43 git add .
+
+  44 git status
+
+  45 git commit -m "Commit-2"
+
+  46 vi test.txt
+
+  47 git status
+
+  48 git add .
+
+  49 git status
+
+  50 git commit -m "Commit-3"
+
+  51 git log
+
+  52 vi test.txt
+
+  53 git checkout d0733c92dab24b210730c0ef744d46ada0fa8529
+
+  54 vi test.txt
+
+  55 git checkout 409bc73cb7752e6e4d337fed5919ce718fe0112b
+
+  56 vi test.txt
+
+  57 git checkout d0733c92dab24b210730c0ef744d46ada0fa8529
+
+  58 vi test.txt
+
+  59 git checkout 827daf76a55c117e1da049e889980aa6d40a92ea
+
+  60 vi test.txt
+
+  61 git log
+
+  62 cd test
+
+  63 vi test.txt
+
+  64 git og
+
+  65 git log
+
+  66 git checkout d0733c92dab24b210730c0ef744d46ada0fa8529
+
+  67 vi test.txt
+
+  68 cd test
+
+  69 ls -lrt
+
+  70 git remote add origin https://github.com/Devendranathashok/test
+
+  71 git remote -v
+
+  72 git push
+
+  73 git push origin master/feature
+
+  74 clear
+
+  75 pwd
+
+  76 ls -lrt
+
+  77 git clone https://github.com/Devendranathashok/ansible-certsforhttp.git
+
+  78 ls -lrt
+
+  79 cd ansible-certsforhttp/
+
+  80 ls -lrt
+
+  81 vi README.md
+
+  82 git status
+
+  83 git commit -m "modified readme"
+
+  84 git add .
+
+  85 git commit -m "modified readme"
+
+  86 git push
+
+  87 cd ..
+
+  88 git clone https://github.com/Devendranathashok/test-one.git
+
+  89 ls -lrt
+
+  90 cd test-one
+
+  91 ls -lrt
+
+  92 git branch
+
+  93 cd /opt
+
+  94 cd test-one/
+
+  95 git branch
+
+  96 git master
+
+  97 git checkout master
+
+  98 git branch
+
+  99 git branch feature-iot
+
+ 100 git checkout feature-iot
+
+ 101 git branch
+
+ 102 ls -lrt
+
+ 103 git checkout master
+
+ 104 git pull
+
+ 105 git branch -d feature-iot
+
+ 106 git branch feature-cicd
+
+ 107 git checkout feature-cicd
+
+ 108 ls -lrt
+
+ 109 git branch
+
+ 110 vi jenkisfile
+
+ 111 git status
+
+ 112 git add jenkisfile
+
+ 113 git commit -m "adding jenkinsfile"
+
+ 114 git push
+
+ 115 git push orgin feature-cicd
+
+ 116 git status
+
+ 117 git push orgin feature-cicd
+
+ 118 git push origin feature-cicd
+
+ 119 git checkout master
+
+ 120 ls -lrt
+
+ 121 vi testing.txt
+
+ 122 git add .
+
+ 123 git commit -m "testing push rejects"
+
+ 124 git push
+
+ 125 git pull
+
+ 126 ls -lrt
+
+ 127 git push
+
+ 128 git brach
+
+ 129 git branch
+
+ 130 vi cal.txt
+
+ 131 git add .
+
+ 132 git commit -m "adding cal.txt"
+
+ 133 git push
+
+ 134 git fetch
+
+ 135 git push
+
+ 136 git merge
+
+ 137 git push
+
+ 138 vi .gitingnore
+
+ 139 vi .gitingnore
+
+ 140 vi ashok.py
+
+ 141 vi ignorethisfile
+
+ 142 git add .gitignore
+
+ 143 ls -lrt
+
+ 144 vi .gitignore
+
+ 145 ls -lart
+
+ 146 git add .gitignore
+
+ 147 git commit -m "adding .gitignore"
+
+ 148 git push
+
+ 149 ls -lrt
+
+ 150 git status
+
+ 151 git pull
+
+ 152 git add .
+
+ 153 git status
+
+ 154 vi .gitignore
+
+ 155 git commit -m "testing gitignore"
+
+ 156 git push
+
+ 157 history
+
+
+
+
+
+
+
+
+
+ yum install wget -y
+
+ 615 yum install -y java-1.8.0-openjdk-devel
+
+ 616 java -version
+
+ 617 cd /opt
+
+ 618 cd ..
+
+ 619 cd /usr
+
+ 620 ls -lrt
+
+ 621 cd local
+
+ 622 ls -lrt
+
+ 623 cd src
+
+ 624 ls -lrt
+
+ 625 wget http://www-us.apache.org/dist/maven/maven-3/3.5.4/binaries/apache-maven-3.5.4-bin.tar.gz
+
+ 626 ls -lrt
+
+ 627 tar -xf apache-maven-3.5.4-bin.tar.gz
+
+ 628 ls -lrt
+
+ 629 cd apache-maven-3.5.4
+
+ 630 ls -lrt
+
+ 631 cd ..
+
+ 632 mv apache-maven-3.5.4/ apache-maven/
+
+ 633 ls -lrt
+
+ 634 mvn
+
+ 635 cd /etc/profile.d/
+
+ 636 ls -lrt
+
+ 637 vim maven.sh
+
+ 638 vi maven.sh
+
+ 639 chmod +x maven.sh
+
+ 640 source /etc/profile.d/maven.sh
+
+ 641 mvn
+
+ 642 mvn --version
+
+
+
+
+
+TOMCAT:
+
+Install :
+
+after ec2 login
+
+sudo su -
+
+cd /usr/local
+
+wget https://downloads.apache.org/tomcat/tomcat-7/v7.0.104/bin/apache-tomcat-7.0.104.tar.gz
+
+tar xvfz apache-tomcat-7.0.104.tar.gz
+
+mv apache-tomcat-7.0.104 tomcat
+
+ start:
+
+cd /usr/local/tomcat/bin 
+
+./startup.sh
+
+
+
+open tomcat in web browser :
+
+
+
+http://18.216.220.91:8080
+
+
+
+tomcat user set up:
+
+
+
+cd /usr/local/tomcat/conf
+
+
+
+vi tomcat-users.xml
+
+
+
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+
+ Licensed to the Apache Software Foundation (ASF) under one or more
+
+ contributor license agreements. See the NOTICE file distributed with
+
+ this work for additional information regarding copyright ownership.
+
+ The ASF licenses this file to You under the Apache License, Version 2.0
+
+ (the "License"); you may not use this file except in compliance with
+
+ the License. You may obtain a copy of the License at
+
+
+
+   http://www.apache.org/licenses/LICENSE-2.0
+
+
+
+ Unless required by applicable law or agreed to in writing, software
+
+ distributed under the License is distributed on an "AS IS" BASIS,
+
+ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+
+ See the License for the specific language governing permissions and
+
+ limitations under the License.
+
+-->
+
+<tomcat-users xmlns="http://tomcat.apache.org/xml"
+
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+
+       xsi:schemaLocation="http://tomcat.apache.org/xml tomcat-users.xsd"
+
+       version="1.0">
+
+<!--
+
+ NOTE: By default, no user is included in the "manager-gui" role required
+
+ to operate the "/manager/html" web application. If you wish to use this app,
+
+ you must define such a user - the username and password are arbitrary. It is
+
+ strongly recommended that you do NOT use one of the users in the commented out
+
+ section below since they are intended for use with the examples web
+
+ application.
+
+-->
+
+<!--
+
+ NOTE: The sample user and role entries below are intended for use with the
+
+ examples web application. They are wrapped in a comment and thus are ignored
+
+ when reading this file. If you wish to configure these users for use with the
+
+ examples web application, do not forget to remove the <!.. ..> that surrounds
+
+ them. You will also need to set the passwords to something appropriate.
+
+-->
+
+
+
+<role rolename="manager-gui"/>
+
+<role romename="manager-script"/>
+
+<user username="tomcat" password="s3cret" roles="manager-gui,manager-script"/>
+
+</tomcat-users>
+
+
+
+
+
+Restart tomcat:
+
+
+
+cd /usr/local/tomcat/bin
+
+
+
+./shutdown.sh
+
+
+
+./startup.sh
+
+
+
+http://18.216.220.91:8080
+
+
+
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+cd /opt
+
+git clone https://github.com/Devendranathashok/my-app.git
+
+
+
+cd my-app
+
+
+
+mvn package
+
+
+
+cp -pr /opt/my-app/target/my-web.0.0.1.war /usr/local/tomcat/webapps
+
+
+
+Restart tomcat:
+
+
+
+cd /usr/local/tomcat/bin
+
+
+
+./shutdown.sh
+
+
+
+./startup.sh
+
+
+
+Nexus:
+
+
+
+https://devopscube.com/how-to-install-latest-sonatype-nexus-3-on-linux/
+
+
+
+
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+[root@ip-172-31-42-9 controller]# ls -lrt
+
+total 4
+
+-rwxr-xr-x. 1 root root 305 May 29 04:09 Calculator.java
+
+[root@ip-172-31-42-9 controller]# vi Calculator.java
+
+[root@ip-172-31-42-9 controller]# git status
+
+HEAD detached at 304c497
+
+Changes not staged for commit:
+
+ (use "git add <file>..." to update what will be committed)
+
+ (use "git checkout -- <file>..." to discard changes in working directory)
+
+
+
+    modified: Calculator.java
+
+
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+[root@ip-172-31-42-9 controller]# git add .
+
+[root@ip-172-31-42-9 controller]# git status
+
+HEAD detached at 304c497
+
+Changes to be committed:
+
+ (use "git reset HEAD <file>..." to unstage)
+
+
+
+    modified: Calculator.java
+
+
+
+[root@ip-172-31-42-9 controller]# git commit -m "added ,"
+
+[detached HEAD cc1ebe2] added ,
+
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+[root@ip-172-31-42-9 controller]# git push origin master
+
+Username for 'https://github.com': ashok.kammala@gmail.com
+
+Password for 'https://ashok.kammala@gmail.com@github.com':
+
+remote: Invalid username or password.
+
+fatal: Authentication failed for 'https://github.com/Devendranathashok/my-app.git/'
+
+[root@ip-172-31-42-9 controller]# git push origin master
+
+Username for 'https://github.com': ashok.kammala@gmail.com
+
+Password for 'https://ashok.kammala@gmail.com@github.com':
+
+To https://github.com/Devendranathashok/my-app.git
+
+ ! [rejected] master -> master (fetch first)
+
+error: failed to push some refs to 'https://github.com/Devendranathashok/my-app.git'
+
+hint: Updates were rejected because the remote contains work that you do
+
+hint: not have locally. This is usually caused by another repository pushing
+
+hint: to the same ref. You may want to first integrate the remote changes
+
+hint: (e.g., 'git pull ...') before pushing again.
+
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+
+[root@ip-172-31-42-9 controller]# git pull
+
+remote: Enumerating objects: 19, done.
+
+remote: Counting objects: 100% (19/19), done.
+
+remote: Compressing objects: 100% (4/4), done.
+
+Unpacking objects: 100% (10/10), done.
+
+remote: Total 10 (delta 2), reused 0 (delta 0), pack-reused 0
+
+From https://github.com/Devendranathashok/my-app
+
+  304c497..23636f1 master -> origin/master
+
+You are not currently on a branch.
+
+Please specify which branch you want to merge with.
+
+See git-pull(1) for details.
+
+
+
+  git pull <remote> <branch>
+
+
+
+[root@ip-172-31-42-9 controller]# git pull master
+
+fatal: 'master' does not appear to be a git repository
+
+fatal: Could not read from remote repository.
+
+
+
+Please make sure you have the correct access rights
+
+and the repository exists.
+
+[root@ip-172-31-42-9 controller]# git pull origin master
+
+From https://github.com/Devendranathashok/my-app
+
+ * branch master -> FETCH_HEAD
+
+Merge made by the 'recursive' strategy.
+
+ src/test/java/in/javahome/myweb/controller/CalculatorTest.java | 3 +++
+
+ 1 file changed, 3 insertions(+)
+
+[root@ip-172-31-42-9 controller]# git push origin master
+
+Username for 'https://github.com': ashok.kammala@gmail.com
+
+Password for 'https://ashok.kammala@gmail.com@github.com':
+
+To https://github.com/Devendranathashok/my-app.git
+
+ ! [rejected] master -> master (non-fast-forward)
+
+error: failed to push some refs to 'https://github.com/Devendranathashok/my-app.git'
+
+hint: Updates were rejected because a pushed branch tip is behind its remote
+
+hint: counterpart. Check out this branch and integrate the remote changes
+
+hint: (e.g. 'git pull ...') before pushing again.
+
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+
+[root@ip-172-31-42-9 controller]# git pull origin master
+
+From https://github.com/Devendranathashok/my-app
+
+ * branch master -> FETCH_HEAD
+
+Already up to date.
+
+[root@ip-172-31-42-9 controller]# git branch
+
+* (HEAD detached from 304c497)
+
+ master
+
+[root@ip-172-31-42-9 controller]# git checkout master
+
+Warning: you are leaving 2 commits behind, not connected to
+
+any of your branches:
+
+
+
+ a5eb398 Merge branch 'master' of https://github.com/Devendranathashok/my-app into HEAD
+
+ cc1ebe2 added ,
+
+
+
+If you want to keep them by creating a new branch, this may be a good time
+
+to do so with:
+
+
+
+ git branch <new-branch-name> a5eb398
+
+
+
+Switched to branch 'master'
+
+Your branch is behind 'origin/master' by 1 commit, and can be fast-forwarded.
+
+ (use "git pull" to update your local branch)
+
+[root@ip-172-31-42-9 controller]# git branch
+
+* master
+
+++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+
+
+git clone https://github.com/Devendranathashok/my-app.git
+
+
+
++++++++++++++++++++++++++++++++++++++++++++
+
+mvn test
+
+mvn complile
+
+mvn package
+
+mvn clean
+
+
+
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+
+
+[root@ip-172-31-42-9 target]# history
+
+  1 yum update -y
+
+  2 yum install git -y
+
+  3 git --version
+
+  4 clear
+
+  5 cd /apps
+
+  6 ls -lrt
+
+  7 cd my-app
+
+  8 cd /apps/my-app/src/main/java/in/javahome/myweb/controller
+
+  9 ls -lrt
+
+  10 vi Calculator.java
+
+  11 git status
+
+  12 git add .
+
+  13 git status
+
+  14 git commit -m "added ,"
+
+  15 git push origin master
+
+  16 git pull
+
+  17 git pull master
+
+  18 git pull origin master
+
+  19 git push origin master
+
+  20 git pull origin master
+
+  21 git branch
+
+  22 git checkout master
+
+  23 git branch
+
+  24 git pull origin master
+
+  25 git push origin master
+
+  26 ls -lrt
+
+  27 vi Calculator.java
+
+  28 git status
+
+  29 git add .
+
+  30 git commit -m "added comma"
+
+  31 git push
+
+  32 git pull
+
+  33 git push origin master
+
+  34 clear
+
+  35 yum install maven -n
+
+  36 yum install maven -y
+
+  37 mvn
+
+  38 cd ..
+
+  39 ls -lrt
+
+  40 mvn clean
+
+  41 mvn package
+
+  42 git branch
+
+  43 git pull origin master
+
+  44 mvn package
+
+  45 git pull
+
+  46 mvn package
+
+  47 git pull
+
+  48 mvn package
+
+  49 ls -lrt
+
+  50 cd targetr
+
+  51 cd target
+
+  52 ls -lrt
+
+  53 history
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+nexus:
+
+https://devopscube.com/how-to-install-latest-sonatype-nexus-3-on-linux/
+
+
+
+yum install wget -y
+
+https://help.sonatype.com/repomanager3/download
+
+wget https://download.sonatype.com/nexus/3/latest-unix.tar.gz
+
+tar xvzf  latest-unix.tar.gz
+
+mv nexus-3.23.0-03 nexus
+
+
+
+to install java8
+
+yum install java-1.8.0-openjdk.x86_64 -y
+
+
+
+to adduser
+
+
+
+adduser nexus
+
+passwd nexus
+
+
+
+vi /etc/sudoers ---> 
+
+
+
+## Same thing without a password
+
+# %wheel ALL=(ALL) NOPASSWD: ALL
+
+nexus ALL=(ALL) NOPASSWD: ALL
+
+
+
+sudo vi /usr/local/nexus/bin/nexus.vmoptions
+
+
+
+
+
+[Unit]
+
+Description=nexus service
+
+After=network.target
+
+
+
+[Service]
+
+Type=forking
+
+LimitNOFILE=65536
+
+User=nexus
+
+Group=nexus
+
+ExecStart=/usr/local/nexus/bin/nexus start
+
+ExecStop=/usr/local/nexus/bin/nexus stop
+
+User=nexus
+
+Restart=on-abort
+
+
+
+[Install]
+
+WantedBy=multi-user.target
+
+
+
+
+
+[root@ip-172-31-36-98 bin]# su nexus
+
+
+
+[nexus@ip-172-31-36-98 bin]$ sudo systemctl start nexus
+
+
+
+[nexus@ip-172-31-36-98 bin]$ systemctl status nexus
+
+● nexus.service - nexus service
+
+  Loaded: loaded (/etc/systemd/system/nexus.service; enabled; vendor preset: disabled)
+
+  Active: active (running) since Sat 2020-05-30 14:22:59 UTC; 9s ago
+
+ Process: 13659 ExecStart=/usr/local/nexus/bin/nexus start (code=exited, status=0/SUCCESS)
+
+ Main PID: 13857 (java)
+
+  Tasks: 39 (limit: 23878)
+
+  Memory: 946.5M
+
+  CGroup: /system.slice/nexus.service
+
+      └─13857 /usr/lib/jvm/java-1.8.0-openjdk-1.8.0.252.b09-2.el8_1.x86_64/jre/bin/java -server -Dinstall4j.jvmDir=/usr/lib/jvm/java-1.8.0-openjdk-1.8.0.252.b09-2.el8_1.x86_64/jre >
+
+lines 1-9/9 (END)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+i --- insert
+
+dd -- complete delete
+
+x - one letter delete
+
+:wq! - save & quit
+
+:q! - quit without save
+
+VI Editor Shortcuts:
+
+
+
+
+
+
+
+i : Inserts text before current cursor location.
+
+
+
+I : Inserts text at beginning of current line.
+
+
+
+a : Inserts text after current cursor location.
+
+
+
+A : Inserts text at end of current line.
+
+
+
+o : Creates a new line for text entry below cursor location.
+
+
+
+O : Creates a new line for text entry above cursor location.
+
+
+
+r : Replace single character under the cursor with the next character typed.
+
+
+
+R : Replaces text from the cursor to right.
+
+
+
+s : Replaces single character under the cursor with any number of characters.
+
+
+
+S :Replaces entire line.
+
+
+
+
+
+
+
+X Uppercase: Deletes the character before the cursor location.
+
+
+
+x Lowercase : Deletes the character at the cursor location.
+
+
+
+Dw : Deletes from the current cursor location to the next word.
+
+
+
+d^ : Deletes from current cursor position to the beginning of the line.
+
+
+
+d$ : Deletes from current cursor position to the end of the line.
+
+
+
+Dd : Deletes the line the cursor is on.
+
+
+
+
+
+
+
+Yy : Copies the current line.
+
+
+
+9yy : Yank current line and 9 lines below.
+
+
+
+p : Puts the copied text after the cursor.
+
+
+
+P : Puts the yanked text before the cursor.
+
+
+
+
+
+
+
+q : Quit
+
+
+
+q! : Quit without saving changes i.e. discard changes.
+
+
+
+r fileName : Read data from file called fileName.
+
+
+
+wq : Write and quit (save and exit).
+
+
+
+w fileName : Write to file called fileName (save as).
+
+
+
+w! fileName : Overwrite to file called fileName (save as forcefully).
+
+
+
+!cmd : Runs shell commands and returns to Command mode.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Day1:
+
+
+
+Login to instance :
+
+
+
+ open ec2 service from aws console then select the instance you want to connect then click on connect and follow the steps to do ssh.
+
+
+
+Ex:
+
+ssh -i "mylinuxkeypair.pem" ec2-user@ec2-3-23-94-76.us-east-2.compute.amazonaws.com
+
+
+
+
+
+Git is a free and open source distributed version control system designed to handle everything from small to very large projects with speed and efficiency.
+
+
+
+Version control tool is process to store all members changes in centralized location and keep track of all the changes being done in the version control system by whom,why and when.
+
+
+
+YUM: 
+
+
+
+Yellowdog Updater Modified
+
+It acts as a frontend to rpm and handles all dependency issues
+
+
+
+RPM:
+
+RPM (Red Hat Package Manager) is an default open source and most popular package management utility for Red Hat based systems like (RHEL, CentOS and Fedora). The tool allows system administrators and users to install, update, uninstall, query, verify and manage system software packages in Unix/Linux operating systems
+
+
+
+
+
+
+
+Installing git:
+
+
+
+yum install git -y
+
+
+
+To check GIT version:
+
+
+
+# git --version
+
+
+
+
+
+Setting up username:
+
+
+
+# git config --global user.name “ashok”
+
+
+
+# git config --global user.name
+
+
+
+Setting up email:
+
+
+
+# git config --global user.email “ashok.kammala@gmail.com”
+
+
+
+# git config --global user.email
+
+
+
+With all the basic setting in place let’s start our first GIT project
+
+
+
+Create project directory:
+
+#cd /opt
+
+#mkdir myfirstproject
+
+
+
+change directory to myfirstproject:
+
+
+
+#cd myfirstproject
+
+
+
+#git init
+
+
+
+#git status
+
+
+
+Now let start our project and create our first file:
+
+
+
+ cat > file1.txt
+
+
+
+This is my new file in Linux.
+
+
+
+The cat command is very useful.
+
+
+
+------or---
+
+# vi firstnovel --> press i
+
+
+
+"this is my first novel"
+
+
+
+:wq!
+
+
+
+
+
+
+
+# git add . ( staging area)
+
+
+
+# git status
+
+
+
+#git commit -m “my first project file” (local project repository)
+
+
+
+#git status
+
+
+
+Now let’s check the git commit history
+
+
+
+# git log
+
+
+
+# vi secondnovel --> press i
+
+
+
+
+
+
+
+"this is my second novel"
+
+
+
+
+
+
+
+:wq!
+
+
+
+# git add . ( staging area)
+
+
+
+
+
+
+
+# git status
+
+
+
+
+
+
+
+#git commit -m “my second project file” (local project repository)
+
+
+
+
+
+
+
+#git status
+
+
+
+
+
+
+
+Now let’s check the git commit history
+
+
+
+
+
+
+
+
+
+DAY2:
+
+
+
+CREATE GITHUB Account
+
+
+
+
+
+VI Editor Shortcuts:
+
+
+
+i : Inserts text before current cursor location.
+
+I : Inserts text at beginning of current line.
+
+a : Inserts text after current cursor location.
+
+A : Inserts text at end of current line.
+
+o : Creates a new line for text entry below cursor location.
+
+O : Creates a new line for text entry above cursor location.
+
+r : Replace single character under the cursor with the next character typed.
+
+R : Replaces text from the cursor to right.
+
+s : Replaces single character under the cursor with any number of characters.
+
+S :Replaces entire line.
+
+
+
+X Uppercase: Deletes the character before the cursor location.
+
+x Lowercase : Deletes the character at the cursor location.
+
+Dw : Deletes from the current cursor location to the next word.
+
+d^ : Deletes from current cursor position to the beginning of the line.
+
+d$ : Deletes from current cursor position to the end of the line.
+
+Dd : Deletes the line the cursor is on.
+
+
+
+Yy : Copies the current line.
+
+9yy : Yank current line and 9 lines below.
+
+p : Puts the copied text after the cursor.
+
+P : Puts the yanked text before the cursor.
+
+
+
+q : Quit
+
+q! : Quit without saving changes i.e. discard changes.
+
+r fileName : Read data from file called fileName.
+
+wq : Write and quit (save and exit).
+
+w fileName : Write to file called fileName (save as).
+
+w! fileName : Overwrite to file called fileName (save as forcefully).
+
+!cmd : Runs shell commands and returns to Command mode.
+
+
+
+
+
+Adding a remote
+
+
+
+# git remote add origin https://github.com/Devendranathashok/test-one
+
+
+
+# git remote -v
+
+
+
+once we add remote , we can push all our changes from local repository to central repo i.e GITHUB.
+
+
+
+  1 clear
+
+  2 mkdir sample
+
+  3 vi demo
+
+  4 git staus
+
+  5 git init
+
+  6 git status
+
+  7 ls -lrt
+
+  8 cd ..
+
+  9 pwd
+
+  10 mkdir sample
+
+  11 cd sample
+
+  12 vi demo
+
+  13 git status
+
+  14 git init
+
+  15 git status
+
+  16 ls -lrt
+
+  17 cd demo
+
+  18 cd sample
+
+  19 ls -lrt
+
+  20 git status
+
+  21 cd ..
+
+  22 cd myfirstproject
+
+  23 ls -lrt
+
+  24 git remote add origin https://github.com/Devendranathashok/myfirstproject
+
+  25 git remote -v
+
+  26 git push
+
+  27 git push --set-upstream origin master
+
+  28 clear
+
+  29 clear
+
+  30 pwd
+
+  31 ls -lrt
+
+  32 mkdir test
+
+  33 cd test
+
+  34 git init
+
+  35 vi test.txt
+
+  36 git status
+
+  37 git add .
+
+  38 git status
+
+  39 git commit -m "Commit-1"
+
+  40 git log
+
+  41 vi test.txt
+
+  42 git status
+
+  43 git add .
+
+  44 git status
+
+  45 git commit -m "Commit-2"
+
+  46 vi test.txt
+
+  47 git status
+
+  48 git add .
+
+  49 git status
+
+  50 git commit -m "Commit-3"
+
+  51 git log
+
+  52 vi test.txt
+
+  53 git checkout d0733c92dab24b210730c0ef744d46ada0fa8529
+
+  54 vi test.txt
+
+  55 git checkout 409bc73cb7752e6e4d337fed5919ce718fe0112b
+
+  56 vi test.txt
+
+  57 git checkout d0733c92dab24b210730c0ef744d46ada0fa8529
+
+  58 vi test.txt
+
+  59 git checkout 827daf76a55c117e1da049e889980aa6d40a92ea
+
+  60 vi test.txt
+
+  61 git log
+
+  62 cd test
+
+  63 vi test.txt
+
+  64 git og
+
+  65 git log
+
+  66 git checkout d0733c92dab24b210730c0ef744d46ada0fa8529
+
+  67 vi test.txt
+
+  68 cd test
+
+  69 ls -lrt
+
+  70 git remote add origin https://github.com/Devendranathashok/test
+
+  71 git remote -v
+
+  72 git push
+
+  73 git push origin master/feature
+
+  74 clear
+
+  75 pwd
+
+  76 ls -lrt
+
+  77 git clone https://github.com/Devendranathashok/ansible-certsforhttp.git
+
+  78 ls -lrt
+
+  79 cd ansible-certsforhttp/
+
+  80 ls -lrt
+
+  81 vi README.md
+
+  82 git status
+
+  83 git commit -m "modified readme"
+
+  84 git add .
+
+  85 git commit -m "modified readme"
+
+  86 git push
+
+  87 cd ..
+
+  88 git clone https://github.com/Devendranathashok/test-one.git
+
+  89 ls -lrt
+
+  90 cd test-one
+
+  91 ls -lrt
+
+  92 git branch
+
+  93 cd /opt
+
+  94 cd test-one/
+
+  95 git branch
+
+  96 git master
+
+  97 git checkout master
+
+  98 git branch
+
+  99 git branch feature-iot
+
+ 100 git checkout feature-iot
+
+ 101 git branch
+
+ 102 ls -lrt
+
+ 103 git checkout master
+
+ 104 git pull
+
+ 105 git branch -d feature-iot
+
+ 106 git branch feature-cicd
+
+ 107 git checkout feature-cicd
+
+ 108 ls -lrt
+
+ 109 git branch
+
+ 110 vi jenkisfile
+
+ 111 git status
+
+ 112 git add jenkisfile
+
+ 113 git commit -m "adding jenkinsfile"
+
+ 114 git push
+
+ 115 git push orgin feature-cicd
+
+ 116 git status
+
+ 117 git push orgin feature-cicd
+
+ 118 git push origin feature-cicd
+
+ 119 git checkout master
+
+ 120 ls -lrt
+
+ 121 vi testing.txt
+
+ 122 git add .
+
+ 123 git commit -m "testing push rejects"
+
+ 124 git push
+
+ 125 git pull
+
+ 126 ls -lrt
+
+ 127 git push
+
+ 128 git brach
+
+ 129 git branch
+
+ 130 vi cal.txt
+
+ 131 git add .
+
+ 132 git commit -m "adding cal.txt"
+
+ 133 git push
+
+ 134 git fetch
+
+ 135 git push
+
+ 136 git merge
+
+ 137 git push
+
+ 138 vi .gitingnore
+
+ 139 vi .gitingnore
+
+ 140 vi ashok.py
+
+ 141 vi ignorethisfile
+
+ 142 git add .gitignore
+
+ 143 ls -lrt
+
+ 144 vi .gitignore
+
+ 145 ls -lart
+
+ 146 git add .gitignore
+
+ 147 git commit -m "adding .gitignore"
+
+ 148 git push
+
+ 149 ls -lrt
+
+ 150 git status
+
+ 151 git pull
+
+ 152 git add .
+
+ 153 git status
+
+ 154 vi .gitignore
+
+ 155 git commit -m "testing gitignore"
+
+ 156 git push
+
+ 157 history
+
+
+
+
+
+
+
+
+
+ yum install wget -y
+
+ 615 yum install -y java-1.8.0-openjdk-devel
+
+ 616 java -version
+
+ 617 cd /opt
+
+ 618 cd ..
+
+ 619 cd /usr
+
+ 620 ls -lrt
+
+ 621 cd local
+
+ 622 ls -lrt
+
+ 623 cd src
+
+ 624 ls -lrt
+
+ 625 wget http://www-us.apache.org/dist/maven/maven-3/3.5.4/binaries/apache-maven-3.5.4-bin.tar.gz
+
+ 626 ls -lrt
+
+ 627 tar -xf apache-maven-3.5.4-bin.tar.gz
+
+ 628 ls -lrt
+
+ 629 cd apache-maven-3.5.4
+
+ 630 ls -lrt
+
+ 631 cd ..
+
+ 632 mv apache-maven-3.5.4/ apache-maven/
+
+ 633 ls -lrt
+
+ 634 mvn
+
+ 635 cd /etc/profile.d/
+
+ 636 ls -lrt
+
+ 637 vim maven.sh
+
+ 638 vi maven.sh
+
+ 639 chmod +x maven.sh
+
+ 640 source /etc/profile.d/maven.sh
+
+ 641 mvn
+
+ 642 mvn --version
+
+
+
+
+
+TOMCAT:
+
+Install :
+
+after ec2 login
+
+sudo su -
+
+cd /usr/local
+
+wget https://downloads.apache.org/tomcat/tomcat-7/v7.0.104/bin/apache-tomcat-7.0.104.tar.gz
+
+tar xvfz apache-tomcat-7.0.104.tar.gz
+
+mv apache-tomcat-7.0.104 tomcat
+
+ start:
+
+cd /usr/local/tomcat/bin 
+
+./startup.sh
+
+
+
+open tomcat in web browser :
+
+
+
+http://18.216.220.91:8080
+
+
+
+tomcat user set up:
+
+
+
+cd /usr/local/tomcat/conf
+
+
+
+vi tomcat-users.xml
+
+
+
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+
+ Licensed to the Apache Software Foundation (ASF) under one or more
+
+ contributor license agreements. See the NOTICE file distributed with
+
+ this work for additional information regarding copyright ownership.
+
+ The ASF licenses this file to You under the Apache License, Version 2.0
+
+ (the "License"); you may not use this file except in compliance with
+
+ the License. You may obtain a copy of the License at
+
+
+
+   http://www.apache.org/licenses/LICENSE-2.0
+
+
+
+ Unless required by applicable law or agreed to in writing, software
+
+ distributed under the License is distributed on an "AS IS" BASIS,
+
+ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+
+ See the License for the specific language governing permissions and
+
+ limitations under the License.
+
+-->
+
+<tomcat-users xmlns="http://tomcat.apache.org/xml"
+
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+
+       xsi:schemaLocation="http://tomcat.apache.org/xml tomcat-users.xsd"
+
+       version="1.0">
+
+<!--
+
+ NOTE: By default, no user is included in the "manager-gui" role required
+
+ to operate the "/manager/html" web application. If you wish to use this app,
+
+ you must define such a user - the username and password are arbitrary. It is
+
+ strongly recommended that you do NOT use one of the users in the commented out
+
+ section below since they are intended for use with the examples web
+
+ application.
+
+-->
+
+<!--
+
+ NOTE: The sample user and role entries below are intended for use with the
+
+ examples web application. They are wrapped in a comment and thus are ignored
+
+ when reading this file. If you wish to configure these users for use with the
+
+ examples web application, do not forget to remove the <!.. ..> that surrounds
+
+ them. You will also need to set the passwords to something appropriate.
+
+-->
+
+
+
+<role rolename="manager-gui"/>
+
+<role romename="manager-script"/>
+
+<user username="tomcat" password="s3cret" roles="manager-gui,manager-script"/>
+
+</tomcat-users>
+
+
+
+
+
+Restart tomcat:
+
+
+
+cd /usr/local/tomcat/bin
+
+
+
+./shutdown.sh
+
+
+
+./startup.sh
+
+
+
+http://18.216.220.91:8080
+
+
+
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+cd /opt
+
+git clone https://github.com/Devendranathashok/my-app.git
+
+
+
+cd my-app
+
+
+
+mvn package
+
+
+
+cp -pr /opt/my-app/target/my-web.0.0.1.war /usr/local/tomcat/webapps
+
+
+
+Restart tomcat:
+
+
+
+cd /usr/local/tomcat/bin
+
+
+
+./shutdown.sh
+
+
+
+./startup.sh
+
+
+
+Nexus:
+
+
+
+https://devopscube.com/how-to-install-latest-sonatype-nexus-3-on-linux/
+
+
+
+
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+[root@ip-172-31-42-9 controller]# ls -lrt
+
+total 4
+
+-rwxr-xr-x. 1 root root 305 May 29 04:09 Calculator.java
+
+[root@ip-172-31-42-9 controller]# vi Calculator.java
+
+[root@ip-172-31-42-9 controller]# git status
+
+HEAD detached at 304c497
+
+Changes not staged for commit:
+
+ (use "git add <file>..." to update what will be committed)
+
+ (use "git checkout -- <file>..." to discard changes in working directory)
+
+
+
+    modified: Calculator.java
+
+
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+[root@ip-172-31-42-9 controller]# git add .
+
+[root@ip-172-31-42-9 controller]# git status
+
+HEAD detached at 304c497
+
+Changes to be committed:
+
+ (use "git reset HEAD <file>..." to unstage)
+
+
+
+    modified: Calculator.java
+
+
+
+[root@ip-172-31-42-9 controller]# git commit -m "added ,"
+
+[detached HEAD cc1ebe2] added ,
+
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+[root@ip-172-31-42-9 controller]# git push origin master
+
+Username for 'https://github.com': ashok.kammala@gmail.com
+
+Password for 'https://ashok.kammala@gmail.com@github.com':
+
+remote: Invalid username or password.
+
+fatal: Authentication failed for 'https://github.com/Devendranathashok/my-app.git/'
+
+[root@ip-172-31-42-9 controller]# git push origin master
+
+Username for 'https://github.com': ashok.kammala@gmail.com
+
+Password for 'https://ashok.kammala@gmail.com@github.com':
+
+To https://github.com/Devendranathashok/my-app.git
+
+ ! [rejected] master -> master (fetch first)
+
+error: failed to push some refs to 'https://github.com/Devendranathashok/my-app.git'
+
+hint: Updates were rejected because the remote contains work that you do
+
+hint: not have locally. This is usually caused by another repository pushing
+
+hint: to the same ref. You may want to first integrate the remote changes
+
+hint: (e.g., 'git pull ...') before pushing again.
+
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+
+[root@ip-172-31-42-9 controller]# git pull
+
+remote: Enumerating objects: 19, done.
+
+remote: Counting objects: 100% (19/19), done.
+
+remote: Compressing objects: 100% (4/4), done.
+
+Unpacking objects: 100% (10/10), done.
+
+remote: Total 10 (delta 2), reused 0 (delta 0), pack-reused 0
+
+From https://github.com/Devendranathashok/my-app
+
+  304c497..23636f1 master -> origin/master
+
+You are not currently on a branch.
+
+Please specify which branch you want to merge with.
+
+See git-pull(1) for details.
+
+
+
+  git pull <remote> <branch>
+
+
+
+[root@ip-172-31-42-9 controller]# git pull master
+
+fatal: 'master' does not appear to be a git repository
+
+fatal: Could not read from remote repository.
+
+
+
+Please make sure you have the correct access rights
+
+and the repository exists.
+
+[root@ip-172-31-42-9 controller]# git pull origin master
+
+From https://github.com/Devendranathashok/my-app
+
+ * branch master -> FETCH_HEAD
+
+Merge made by the 'recursive' strategy.
+
+ src/test/java/in/javahome/myweb/controller/CalculatorTest.java | 3 +++
+
+ 1 file changed, 3 insertions(+)
+
+[root@ip-172-31-42-9 controller]# git push origin master
+
+Username for 'https://github.com': ashok.kammala@gmail.com
+
+Password for 'https://ashok.kammala@gmail.com@github.com':
+
+To https://github.com/Devendranathashok/my-app.git
+
+ ! [rejected] master -> master (non-fast-forward)
+
+error: failed to push some refs to 'https://github.com/Devendranathashok/my-app.git'
+
+hint: Updates were rejected because a pushed branch tip is behind its remote
+
+hint: counterpart. Check out this branch and integrate the remote changes
+
+hint: (e.g. 'git pull ...') before pushing again.
+
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+
+[root@ip-172-31-42-9 controller]# git pull origin master
+
+From https://github.com/Devendranathashok/my-app
+
+ * branch master -> FETCH_HEAD
+
+Already up to date.
+
+[root@ip-172-31-42-9 controller]# git branch
+
+* (HEAD detached from 304c497)
+
+ master
+
+[root@ip-172-31-42-9 controller]# git checkout master
+
+Warning: you are leaving 2 commits behind, not connected to
+
+any of your branches:
+
+
+
+ a5eb398 Merge branch 'master' of https://github.com/Devendranathashok/my-app into HEAD
+
+ cc1ebe2 added ,
+
+
+
+If you want to keep them by creating a new branch, this may be a good time
+
+to do so with:
+
+
+
+ git branch <new-branch-name> a5eb398
+
+
+
+Switched to branch 'master'
+
+Your branch is behind 'origin/master' by 1 commit, and can be fast-forwarded.
+
+ (use "git pull" to update your local branch)
+
+[root@ip-172-31-42-9 controller]# git branch
+
+* master
+
+++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+
+
+git clone https://github.com/Devendranathashok/my-app.git
+
+
+
++++++++++++++++++++++++++++++++++++++++++++
+
+mvn test
+
+mvn complile
+
+mvn package
+
+mvn clean
+
+
+
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+
+
+[root@ip-172-31-42-9 target]# history
+
+  1 yum update -y
+
+  2 yum install git -y
+
+  3 git --version
+
+  4 clear
+
+  5 cd /apps
+
+  6 ls -lrt
+
+  7 cd my-app
+
+  8 cd /apps/my-app/src/main/java/in/javahome/myweb/controller
+
+  9 ls -lrt
+
+  10 vi Calculator.java
+
+  11 git status
+
+  12 git add .
+
+  13 git status
+
+  14 git commit -m "added ,"
+
+  15 git push origin master
+
+  16 git pull
+
+  17 git pull master
+
+  18 git pull origin master
+
+  19 git push origin master
+
+  20 git pull origin master
+
+  21 git branch
+
+  22 git checkout master
+
+  23 git branch
+
+  24 git pull origin master
+
+  25 git push origin master
+
+  26 ls -lrt
+
+  27 vi Calculator.java
+
+  28 git status
+
+  29 git add .
+
+  30 git commit -m "added comma"
+
+  31 git push
+
+  32 git pull
+
+  33 git push origin master
+
+  34 clear
+
+  35 yum install maven -n
+
+  36 yum install maven -y
+
+  37 mvn
+
+  38 cd ..
+
+  39 ls -lrt
+
+  40 mvn clean
+
+  41 mvn package
+
+  42 git branch
+
+  43 git pull origin master
+
+  44 mvn package
+
+  45 git pull
+
+  46 mvn package
+
+  47 git pull
+
+  48 mvn package
+
+  49 ls -lrt
+
+  50 cd targetr
+
+  51 cd target
+
+  52 ls -lrt
+
+  53 history
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+nexus:
+
+https://devopscube.com/how-to-install-latest-sonatype-nexus-3-on-linux/
+
+
+
+yum install wget -y
+
+https://help.sonatype.com/repomanager3/download
+
+wget https://download.sonatype.com/nexus/3/latest-unix.tar.gz
+
+tar xvzf  latest-unix.tar.gz
+
+mv nexus-3.23.0-03 nexus
+
+
+
+to install java8
+
+yum install java-1.8.0-openjdk.x86_64 -y
+
+
+
+to adduser
+
+
+
+adduser nexus
+
+passwd nexus
+
+
+
+vi /etc/sudoers ---> 
+
+
+
+## Same thing without a password
+
+# %wheel ALL=(ALL) NOPASSWD: ALL
+
+nexus ALL=(ALL) NOPASSWD: ALL
+
+
+
+sudo vi /usr/local/nexus/bin/nexus.vmoptions
+
+
+
+
+
+[Unit]
+
+Description=nexus service
+
+After=network.target
+
+
+
+[Service]
+
+Type=forking
+
+LimitNOFILE=65536
+
+User=nexus
+
+Group=nexus
+
+ExecStart=/usr/local/nexus/bin/nexus start
+
+ExecStop=/usr/local/nexus/bin/nexus stop
+
+User=nexus
+
+Restart=on-abort
+
+
+
+[Install]
+
+WantedBy=multi-user.target
+
+
+
+
+
+[root@ip-172-31-36-98 bin]# su nexus
+
+
+
+[nexus@ip-172-31-36-98 bin]$ sudo systemctl start nexus
+
+
+
+[nexus@ip-172-31-36-98 bin]$ systemctl status nexus
+
+● nexus.service - nexus service
+
+  Loaded: loaded (/etc/systemd/system/nexus.service; enabled; vendor preset: disabled)
+
+  Active: active (running) since Sat 2020-05-30 14:22:59 UTC; 9s ago
+
+ Process: 13659 ExecStart=/usr/local/nexus/bin/nexus start (code=exited, status=0/SUCCESS)
+
+ Main PID: 13857 (java)
+
+  Tasks: 39 (limit: 23878)
+
+  Memory: 946.5M
+
+  CGroup: /system.slice/nexus.service
+
+      └─13857 /usr/lib/jvm/java-1.8.0-openjdk-1.8.0.252.b09-2.el8_1.x86_64/jre/bin/java -server -Dinstall4j.jvmDir=/usr/lib/jvm/java-1.8.0-openjdk-1.8.0.252.b09-2.el8_1.x86_64/jre >
+
+lines 1-9/9 (END)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+i --- insert
+
+dd -- complete delete
+
+x - one letter delete
+
+:wq! - save & quit
+
+:q! - quit without save
+
+VI Editor Shortcuts:
+
+
+
+
+
+
+
+i : Inserts text before current cursor location.
+
+
+
+I : Inserts text at beginning of current line.
+
+
+
+a : Inserts text after current cursor location.
+
+
+
+A : Inserts text at end of current line.
+
+
+
+o : Creates a new line for text entry below cursor location.
+
+
+
+O : Creates a new line for text entry above cursor location.
+
+
+
+r : Replace single character under the cursor with the next character typed.
+
+
+
+R : Replaces text from the cursor to right.
+
+
+
+s : Replaces single character under the cursor with any number of characters.
+
+
+
+S :Replaces entire line.
+
+
+
+
+
+
+
+X Uppercase: Deletes the character before the cursor location.
+
+
+
+x Lowercase : Deletes the character at the cursor location.
+
+
+
+Dw : Deletes from the current cursor location to the next word.
+
+
+
+d^ : Deletes from current cursor position to the beginning of the line.
+
+
+
+d$ : Deletes from current cursor position to the end of the line.
+
+
+
+Dd : Deletes the line the cursor is on.
+
+
+
+
+
+
+
+Yy : Copies the current line.
+
+
+
+9yy : Yank current line and 9 lines below.
+
+
+
+p : Puts the copied text after the cursor.
+
+
+
+P : Puts the yanked text before the cursor.
+
+
+
+
+
+
+
+q : Quit
+
+
+
+q! : Quit without saving changes i.e. discard changes.
+
+
+
+r fileName : Read data from file called fileName.
+
+
+
+wq : Write and quit (save and exit).
+
+
+
+w fileName : Write to file called fileName (save as).
+
+
+
+w! fileName : Overwrite to file called fileName (save as forcefully).
+
+
+
+!cmd : Runs shell commands and returns to Command mode.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
