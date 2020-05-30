@@ -1,0 +1,20 @@
+#!/bin/bash
+echo "enter 1st command"
+r
+r
+r
+read a;
+echo "enter 2nd command"
+read b;
+r
+r
+r
+r
+r
+r
+r
+sum = 'expr $a + $b '
+t
+t
+t
+echo sum 
